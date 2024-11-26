@@ -941,6 +941,9 @@ button {
 		right: -5%;
 		width: 45%;
 	}
+	.header h1 {
+		font-size: 4rem;
+	}
 }
 
 @media screen and (max-width: 900px) {
@@ -954,6 +957,9 @@ button {
 		left: auto;
 		right: -10%;
 		width: 55%;
+	}
+	.header h1 {
+		font-size: 3rem;
 	}
 }
 
@@ -999,7 +1005,7 @@ button {
 
 	}
 	.header h1 {
-		font-size: 4rem;
+		font-size: 2rem;
 	}
 }
 
@@ -1042,7 +1048,7 @@ button {
 		max-height: 30px;
 	}
 	.header h1 {
-		font-size: 3rem;
+		font-size: 1.6rem;
 	}
 	.header__logo {
 		height: 40px;
