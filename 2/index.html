@@ -1,8 +1,8 @@
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-		<title>National Casino</title>
+		<title>LiraSpin</title>
 		<meta name="description" content="" />
 		<meta
 			name="viewport"
@@ -10,13 +10,13 @@
 		/>
 		<meta http-equiv="x-ua-compatible" content="IE=edge" />
 		<meta property="og:site_name" content="" />
-		<meta property="og:title" content="National Casino" />
+		<meta property="og:title" content="LiraSpin" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="" />
 		<meta property="og:image" content="" />
 		<meta property="og:image:alt" content="" />
 		<meta property="og:description" content="" />
-		<meta property="og:locale" content="en_US" />
+		<meta property="og:locale" content="fr_FR" />
 		<link href="./static/css/main.css" rel="stylesheet" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,9 +28,11 @@
 
 	<body>
 		<div id="root">
-			<header class="header">
-				<a class="clickout header__logo">spin to win</a>
-			</header>
+			<div class="header">
+				<img class="header__logo" src="./static/media/logo.svg" alt="logo">
+				<!-- <div id="animated-text">SPIN TO WIN</div> -->
+				 <h1 data-heading="Tourne Pur Gagner" contenteditable>Tourne Pour Gagner</h1>
+			</div>
 			<main class="wheel">
 				<section class="wheel__content">
 					<img
@@ -143,7 +145,6 @@
 			</section>
 		</div>
 		<script type="text/javascript">
-
 			var wheel = document.querySelector('#wheel-img')
 
 			function firstSpin() {
@@ -165,5 +166,6 @@
 				}, 5000)
 			}
 		</script>
+		<script src="./index.js"></script>
 	</body>
 </html>

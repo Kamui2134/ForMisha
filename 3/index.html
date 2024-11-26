@@ -2,7 +2,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-		<title>National Casino</title>
+		<title>LiraSpin</title>
 		<meta name="description" content="" />
 		<meta
 			name="viewport"
@@ -28,9 +28,10 @@
 
 	<body>
 		<div id="root">
-			<header class="header">
-				<a class="clickout header__logo">spin to win</a>
-			</header>
+			<div class="header">
+				<img class="header__logo" src="./static/media/logo.svg" alt="logo">
+				<div id="animated-text">SPIN TO WIN</div>
+			</div>
 			<main class="wheel">
 				<section class="wheel__content">
 					<img
@@ -143,7 +144,6 @@
 			</section>
 		</div>
 		<script type="text/javascript">
-
 			var wheel = document.querySelector('#wheel-img')
 
 			function firstSpin() {
@@ -165,5 +165,6 @@
 				}, 5000)
 			}
 		</script>
+		<script src="./index.js"></script>
 	</body>
 </html>
