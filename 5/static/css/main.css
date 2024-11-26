@@ -980,6 +980,9 @@ button {
 	.header__logo {
 		font-size: 60px;
 	}
+	.header h1 { 
+		font-size: 2.2rem;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -1049,5 +1052,8 @@ button {
 	}
 	.header__logo {
 		height: 40px;
+	}
+	.header h1 {
+		font-size: 1.4rem;
 	}
 }
