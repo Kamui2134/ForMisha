@@ -1,0 +1,179 @@
+<html lang="nl">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>CristalRoll</title>
+		<meta name="description" content="" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=1"
+		/>
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta property="og:site_name" content="" />
+		<meta property="og:title" content="BetonRed" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:alt" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:locale" content="nl_NL" />
+		<link href="./static/css/main.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<div id="root">
+			<div class="header">
+				<img class="header__logo" src="./static/media/logo.svg" alt="logo" />
+				<!-- <div id="animated-text">SPIN TO WIN</div> -->
+				<h1
+					data-heading="
+				spinn for å vinne"
+					contenteditable
+				>
+					spinn for å vinne
+				</h1>
+			</div>
+			<main class="wheel">
+				<section class="wheel__content">
+					<img
+						class="wheel__arrow-bg"
+						src="./static/media/stopper.e1d4a1058d334aa1479b.png"
+						alt=""
+					/>
+					<section class="wheel__wrap">
+						<audio id="wheel" preload="true">
+							<source
+								src="./static/media/wheel.ed3f0b43dfe28449b9f0.mp3"
+								type="audio/mpeg"
+							/>
+							<source
+								src="./static/media/wheel.a096d68acfd4aed940aa.ogg"
+								type="audio/ogg; codecs=vorbis"
+							/>
+							<source
+								src="./static/media/wheel.612026b901ec0ccbece2.wav"
+								type="audio/wav"
+							/>
+						</audio>
+						<img
+							id="wheel-img"
+							class="wheel__wheel"
+							src="./static/media/new-wheel-fg.png"
+							alt=""
+						/>
+					</section>
+					<img
+						class="wheel__arrow-fg"
+						src="./static/media/stopper.e1d4a1058d334aa1479b.png"
+						alt=""
+					/><button class="button wheel__button" onclick="secondSpin();">
+						SPIN
+					</button>
+				</section>
+			</main>
+			<section id="first-spin" class="popup first-spin">
+				<section class="popup__content">
+					<audio id="fanfare1" preload="true">
+						<source
+							src="./static/media/fanfare-1.b08da8928b62cad249a8.mp3"
+							type="audio/mpeg"
+						/>
+						<source
+							src="./static/media/fanfare-1.082e181f181ae2534334.ogg"
+							type="audio/ogg; codecs=vorbis"
+						/>
+						<source
+							src="./static/media/fanfare-1.2e510af0199f0936402e.wav"
+							type="audio/wav"
+						/>
+					</audio>
+					<div class="popup__inner-bg"></div>
+					<img
+						class="popup__image"
+						src="./static/media/gems-decor.9a6a1a585b37b8e73680.png"
+						alt=""
+					/>
+					<h2 class="popup__title">CONGRATULATIONS!</h2>
+					<p class="popup__text">
+						You won <span class="bonus">100% bonus</span> up to
+						<span class="up-to">1500CAD</span>!
+					</p>
+					<button class="button popup__button" onclick="secondSpin();">
+						Spin again
+					</button>
+				</section>
+			</section>
+			<section id="last-spin" class="popup last-spin">
+				<section class="popup__content">
+					<audio id="fanfare2" preload="true">
+						<source
+							src="./static/media/fanfare-2.037df4d6b00a0536068c.mp3"
+							type="audio/mpeg"
+						/>
+						<source
+							src="./static/media/fanfare-2.53532551232ac96d3e24.ogg"
+							type="audio/ogg; codecs=vorbis"
+						/>
+						<source
+							src="./static/media/fanfare-2.e65f58de23cbc812e344.wav"
+							type="audio/wav"
+						/></audio
+					><img
+						class="popup__image-bg"
+						src="./static/media/sparks.16f4cee8d0403455ccdd.png"
+						alt=""
+					/>
+					<div class="popup__inner-bg"></div>
+					<img
+						class="popup__image"
+						src="./static/media/gems-decor.9a6a1a585b37b8e73680.png"
+						alt=""
+					/>
+					<h2 class="popup__title">
+						GRATULERER
+						<br />DINE TOTALE GEVINNER ER:
+					</h2>
+					<!-- <p class="popup__text big-bonus-text">100% bonus</p> -->
+					<p class="popup__text">
+						€ 450 + <span class="up-to">250 Gratis Spins</span>!
+					</p>
+					<a
+						class="clickout button popup__button"
+						href="https://lukyday.xyz/click"
+					>
+						hevde nå</a
+					>
+				</section>
+			</section>
+		</div>
+		<script type="text/javascript">
+			var wheel = document.querySelector('#wheel-img')
+
+			function firstSpin() {
+				document.getElementById('wheel').play()
+				wheel.classList.add('first-spin')
+				setTimeout(function () {
+					document.getElementById('fanfare1').play()
+					document.getElementById('first-spin').classList.add('active')
+				}, 5000)
+			}
+
+			function secondSpin() {
+				document.getElementById('first-spin').classList.remove('active')
+				document.getElementById('wheel').play()
+				wheel.classList.add('last-spin')
+				setTimeout(function () {
+					document.getElementById('fanfare1').play()
+					document.getElementById('last-spin').classList.add('active')
+				}, 5000)
+			}
+		</script>
+		<script src="./index.js"></script>
+	</body>
+</html>
