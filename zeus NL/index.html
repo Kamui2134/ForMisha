@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="nl" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Casino</title>
+    <link href="#" rel="shortcut icon" type="image/x-icon">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body data-path="img" onload="init();">
+    <div class="preloader">
+        <img src="images/preloader.svg" alt="">
+    </div>
+    <div class="blur_wrap">
+        <div class="wrapper">
+            <div class="animation_container_1"
+                style="background-color: rgba(255, 255, 255, 1); width: 1920px; height: 1080px">
+                <canvas class="canvas_1" width="1920" height="1080"
+                    style="position: absolute; display: block; background-color: rgba(255, 255, 255, 1)"></canvas>
+                <div class="dom_overlay_container_1"
+                    style="pointer-events: none; overflow: hidden; width: 1920px; height: 1080px; position: absolute; left: 0px; top: 0px; display: block">
+                </div>
+            </div>
+            <img class="abs-top" src="images/abs-top.svg" alt="abs-top">
+            <img class="abs-left" src="images/abs-left.svg" alt="abs-left">
+            <img class="abs-right" src="images/abs-right.svg" alt="abs-right">
+            <main class="main">
+                <img class="abs-left-mobile" src="images/abs-left-mob.svg" alt="abs-left-mobile">
+                <img class="chest-img" src="images/chest.png" alt="chest">
+                <div class="animation_container_2" style="background-color: transparent; width: 625px; height: 821px">
+                    <canvas class="canvas_2" width="625" height="821"
+                        style="position: absolute; display: block; background-color: transparent"></canvas>
+                    <div class="dom_overlay_container_2"
+                        style="pointer-events: none; overflow: hidden; width: 625px; height: 821px; position: absolute; left: 0px; top: 0px; display: block">
+                    </div>
+                </div>
+                <a href="#" class="logo">
+                    <img src="#" width="250" height="50" alt="Logo">
+                </a>
+                <div class="game_outer game_1" id="game_1">
+                    <div class="main-txt">
+                        <div class="en">
+                            <span>DRUK OP SPIN</span>
+                            <span>EN ONTVANG DE BONUSSEN</span>
+                        </div>
+                    </div>
+                    <div class="wheel-frame">
+                        <div class="wheel-bg"></div>
+                        <img class="wheel-crystal" src="images/crystal.png" alt="crystal">
+                        <img class="wheel_btn-arrow" src="images/crystal-arrow.png" alt="crystal arrow">
+                        <div class="wheel-spinner-wrapper" data-path="./img" id="wheel-spinner">
+                            <div class="wheel_spinner wheel_spinner_animated" id="wheel-spinner-img">
+                                <div class="wheel__text wheel__text-1" style="transform: rotate(0)">
+                                    <div class="wheel__bonus wheel__bonus-1">
+                                        <span class="en">€450</span>
+                                    </div>
+                                    <div class="wheel__bonus wheel__bonus-2">
+                                        <span class="en">250%</span>
+                                    </div>
+                                </div>
+                                <div class="wheel__text wheel__text-2" style="transform: rotate(45deg)">
+                                    <div class="wheel__bonus wheel__bonus-1">
+                                        <span class="en">RESPIN</span>
+                                    </div>
+                                    <div class="wheel__bonus wheel__bonus-2">
+                                        <span class="en">RESPIN</span>
+                                    </div>
+                                </div>
+                                <div class="wheel__text wheel__text-3" style="transform: rotate(90deg)">
+                                    <div class="wheel__bonus wheel__bonus-1">
+                                        <span class="en">125 FS</span>
+                                    </div>
+                                    <div class="wheel__bonus wheel__bonus-2">
+                                        <span class="en">250 FS</span>
+                                    </div>
+                                </div>
+                                <div class="wheel__text wheel__text-4" style="transform: rotate(135deg)">
+                                    <div class="wheel__bonus wheel__bonus-1">
+                                        <span class="en">Nog een kans!</span>
+                                    </div>
+                                    <div class="wheel__bonus wheel__bonus-2">
+                                        <span class="en">Borg</span>
+                                        <span>X2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wheel_btn spin">
+                            <span class="en">SPIN</span>
+                        </div>
+                    </div>
+                    <div class="animation_container_2" style="background-color: transparent; width: 625px; height: 821px">
+                        <canvas class="canvas_2" width="625" height="821"
+                            style="position: absolute; display: block; background-color: transparent"></canvas>
+                        <div class="dom_overlay_container_2" style="pointer-events: none; overflow: hidden"></div>
+                    </div>
+                </div>
+            </main>
+            <div class="popup_overlay">
+                <div class="popup_window popup_window-1" id="popup_window_2">
+                    <div class="popup_window_wrapper">
+                        <div class="en">
+                            <div class="popup_txt_1">Gefeliciteerd!</div>
+                            <div class="popup_txt_2">JE HEBT GEWONNEN<br>€450 BONUS</div>
+                        </div>
+                        <div class="popup_btn" id="popup_btn_2">
+                            <span class="en">Draai meer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_window" id="popup_window_3">
+                    <div class="popup_window_wrapper">
+                        <div class="en">
+                            <div class="popup_txt_1">
+                                <span class="popup_txt_1_title">Gefeliciteerd</span>
+                                <span class="popup_txt_1_light">Uw totale winst is:</span>
+                                <span class="popup_txt_1_amount">€450<br>+ 250 Gratis spins</span>
+                            </div>
+                        </div>
+                        <div class="popup_video_container">
+                            <video width="170" height="100" poster="#">
+                                <source src="#" type="video/mp4">
+                                <!-- <img src="#" width="170" height="100" alt="gif"> -->
+                            </video>
+                        </div>
+                        <a href="https://lukyday.xyz/click" class="popup_btn">
+                            <span class="en">Claim Nu</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/createjs.min.js"></script>
+    <script defer src="js/anim-1.js"></script>
+    <script defer src="js/anim-2.js"></script>
+    <script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+        var banners = ["7D38081659037643AE59EE0CF5B0E70B", "5B4F4B7FD98A744E9F087DC32B33188F"];
+        function init() {
+            for (var i = 0; i < banners.length; i++) {
+                initItem(i + 1);
+            }
+        }
+        function initItem(i) {
+            var canvas = document.querySelector(".canvas_" + i);
+            anim_container = document.querySelector(".animation_container_" + i);
+            dom_overlay_container = document.querySelector(".dom_overlay_container_" + i);
+            var comp = AdobeAn.getComposition(banners[i - 1]);
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", function (evt) {
+                handleFileLoad(evt, comp);
+            });
+            loader.addEventListener("complete", function (evt) {
+                handleComplete(evt, comp, canvas);
+            });
+            loader.loadManifest(comp.getLibrary().properties.manifest);
+        }
+        function handleFileLoad(evt, comp) {
+            var images = comp.getImages();
+            if (evt && evt.item.type == "image") {
+                images[evt.item.id] = evt.result;
+            }
+        }
+        function handleComplete(evt, comp, canvas) {
+            var lib = comp.getLibrary();
+            var ss = comp.getSpriteSheet();
+            var queue = evt.target;
+            var ssMetadata = lib.ssMetadata;
+            for (var i = 0; i < ssMetadata.length; i++) {
+                ss[ssMetadata[i].name] = new createjs.SpriteSheet({
+                    images: [queue.getResult(ssMetadata[i].name)],
+                    frames: ssMetadata[i].frames,
+                });
+            }
+            exportRoot = new lib.index();
+            stage = new lib.Stage(canvas);
+            stage.enableMouseOver();
+            fnStartAnimation = function () {
+                stage.addChild(exportRoot);
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+            };
+            function makeResponsive(isResp, respDim, isScale, scaleType) {
+            }
+            makeResponsive(false, "both", false, 1);
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+        }
+    </script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
